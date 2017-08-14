@@ -6,12 +6,13 @@
 	  <img src="{{.Site.Params.sidebarphoto}}" class="sidebarphoto">
 	{{ end }}
 
-    {{ if .Site.Params.sidebartitle }}<h1 class="brand-title">{{ .Site.Params.sidebartitle }}</h1>{{ end }}
+    {{ if .Site.Params.sidebartitle1 }}<div class="brand-title1">{{ .Site.Params.sidebartitle1 }}</div>{{ end }}
+    {{ if .Site.Params.sidebartitle2 }}<div class="brand-title2">{{ .Site.Params.sidebartitle2 }}</div>{{ end }}
     {{ if .Site.Params.sidebartagline }}<h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>{{ end }}
 
     <nav class="nav">
       <ul class="nav-list">
-        <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseURL }}">Home</a></li>
+        <!-- <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .Site.BaseURL }}">Home</a></li> -->
         {{ range .Site.Menus.main }}
           <li class="nav-item"><span class="nav-item-separator">//</span><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
