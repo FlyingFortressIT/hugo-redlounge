@@ -77,21 +77,21 @@ h1 {
 }
 
 /* Sidebar */
-.brand-title1 {
+.brand-title1 a {
 	font-family: 'Corbel';
 	font-weight: 400;
 	src: url('/font/font.ttf');
 	padding-top: 1rem;
 	font-size: 2rem;
-	/* margin-bottom: 0.25rem; */
+	text-decoration: none;
 }
-.brand-title2 {
+.brand-title2 a {
 	font-family: 'Corbel';
 	font-weight: 800;
 	src: url('/font/font.ttf');
-	/* padding-top: 1rem; */
 	font-size: 2rem;
 	margin-bottom: 0.25rem;
+	text-decoration: none;
 }
 h2.brand-tagline {
 	font-size: 1.4rem;
@@ -116,9 +116,9 @@ h2.brand-tagline {
 .sidebar a {
   color: #fff;
 }
-.sidebar a:hover {
+/* .sidebar a:hover {
 	color:#7da4d6;
-}
+} */
 
 /* Nav */
 .nav-list {
@@ -147,7 +147,8 @@ h2.brand-tagline {
 }
 .nav-item a:hover,
 .nav-item a:focus {
-    text-decoration: none;
+	text-decoration: none;
+	color:#7da4d6;
 }
 .nav-item-separator {
 	font-weight: 100;
@@ -481,7 +482,7 @@ hr.thin {
 		font-size: 1.2rem;
 	}
 
-	.header>.sidebarphoto{
+	.header a >.sidebarphoto{
 	    width:100px;
 		height:100px;
 	}
@@ -502,7 +503,7 @@ hr.thin {
         text-align: right;
     }
 
-    .header>.sidebarphoto{
+    .header a >.sidebarphoto{
 	    width:125px;
 		height:125px;
 	}
@@ -530,7 +531,7 @@ hr.thin {
         text-align: right;
     }
 
-    .header>.sidebarphoto{
+    .header a >.sidebarphoto{
 	    width:125px;
 		height:125px;
 	}

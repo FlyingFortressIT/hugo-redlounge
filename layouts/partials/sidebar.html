@@ -2,12 +2,13 @@
   <div class="header">
     {{ partial "sidebarheader.html" . }}
 
-	{{ if .Site.Params.sidebarphoto}}
-	  <img src="{{.Site.Params.sidebarphoto}}" class="sidebarphoto">
+  {{ $Site := .Site }}
+  {{ if .Site.Params.sidebarphoto}}
+	  <a href="{{ $Site.BaseURL }}"><img src="{{.Site.Params.sidebarphoto}}" class="sidebarphoto"></a>
 	{{ end }}
 
-    {{ if .Site.Params.sidebartitle1 }}<div class="brand-title1">{{ .Site.Params.sidebartitle1 }}</div>{{ end }}
-    {{ if .Site.Params.sidebartitle2 }}<div class="brand-title2">{{ .Site.Params.sidebartitle2 }}</div>{{ end }}
+    {{ if .Site.Params.sidebartitle1 }}<div class="brand-title1"><a href="{{ $Site.BaseURL }}">{{ .Site.Params.sidebartitle1 }}</a></div>{{ end }}
+    {{ if .Site.Params.sidebartitle2 }}<div class="brand-title2"><a href="{{ $Site.BaseURL }}">{{ .Site.Params.sidebartitle2 }}</a></div>{{ end }}
     {{ if .Site.Params.sidebartagline }}<h2 class="brand-tagline">{{ .Site.Params.sidebartagline }}</h2>{{ end }}
 
     <nav class="nav">
