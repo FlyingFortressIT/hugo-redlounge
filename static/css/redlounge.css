@@ -41,7 +41,8 @@ p a {
 	color:#4556a5;
 }
 h1 {
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Corbel', "Source Sans Pro", sans-serif;
+	src: url('/font/font.ttf');
 	font-weight: 700; 
 }
 .center {
