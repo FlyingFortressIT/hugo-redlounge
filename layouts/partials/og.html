@@ -1,8 +1,16 @@
+<meta property="og:site_name" content="{{ .Site.Title }}"/>
 <meta property="og:title" content="{{ if .Params.ogtitle }}{{ .Params.ogtitle }}{{ else }}{{ .Title }}{{ end }}" />
 <meta property="og:description" content="{{ if .Params.ogdescription }}{{ .Params.ogdescription }}{{ else }}{{ .Description }}{{ end }}" />
+
+{{ if .Site.Params.SiteType }}
+<meta property="og:type" content="{{ .Site.Params.SiteType }}"/>
+{{ else }}
 <meta property="og:type" content="website" />
+{{ end }}
+
 <meta property="og:locale" content="en_US" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{ if .Params.ogimage }}
-<meta property="og:image" content="{{ .Params.ogimage }}" />
+
+{{ if .Site.Params.ogimage }}
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.ogimage }}" />
 {{ end }}
